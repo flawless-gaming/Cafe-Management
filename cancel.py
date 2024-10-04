@@ -17,7 +17,7 @@ def remove():
         else:
             a=len(df.index)
             total=sum(df.Price)
-            df.at[a]='Total',' ',total # To add a new row 'Total'
+            df.loc[a]='Total',' ',total # To add a new row 'Total'
             print('-'*35,df,'-'*35,sep='\n')
             df=df.to_csv('order.csv',index=False) # To update the .csv file
     else:
