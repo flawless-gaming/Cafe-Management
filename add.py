@@ -344,5 +344,5 @@ def Bill():
     a=(len(keys))
     total=sum(values)
     df=pd.DataFrame({'Name':keys,'Qty':Qty,'Price':values})
-    df.at[a]='TOTAL',' ',total
+    df.loc[a]='TOTAL',' ',total
     df=df.to_csv('order.csv',index=False)
